@@ -24,9 +24,13 @@
 
 ### NOTE
   
-- @babel/coreにはソースコードを変更する機能はない。  
-- コードをASTに変換するだけ。  
-- 変更したASTに対して変更を行うのはBabel Plugin  
+- @babel/coreにはソースコードを変更する機能はない。コードをASTに変換するだけ。  
+　変更したASTに対して変更を行うのはBabel Plugin  
+　流れとしては、  
+  1. @babel/parserでASTへ変換  
+  2. 変換されたASTへPlugin(今回は@babel/plugin-transform-arrow-functions)が変更を加える  
+  3. @babel/generatorでASTをコードにしたものを生成  
+  
 - `.babelrc`はコメントアウトできないから`babel.config.js`の方が使いやすい  
 
 ## setup  
