@@ -1,0 +1,21 @@
+{
+  "name": "ikkeiharashima",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@slack/webhook": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.8",
+    "vue-cli": "^2.9.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10"
+  }
+}
