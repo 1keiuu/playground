@@ -1,4 +1,5 @@
 # Babel
+## 構成  
   
 - @babel/cli  
 　　実行コマンドを用意する。内部的には@babel/coreに依存。  
@@ -9,17 +10,19 @@
 - Babel Presets  
 　　Babel Pluginのセット、@babel/preset-envや@babel/preset-reactなどを指す。今回は使用しない  
 
+<br/>
+
 ## コードをどのように変換するのか  
 
 ### 3つの段階  
   
-- Parsing (@babel/parser)  
+- **Parsing (@babel/parser)**  
 　ソースコードをAbstract Syntax Tree (AST)に変換する。  
   　AST:Objectみたいなデータ構造  
 　　cf) [AST Explorer](https://astexplorer.net/)  
-- Transformation  
+- **Transformation**  
   ASTを変換する。Babel Pluginの役割。  
-- Code Generate (@babel/generator)  
+- **Code Generate (@babel/generator)**  
   ASTをソースコードに変換  
 
 ### NOTE
