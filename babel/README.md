@@ -27,12 +27,13 @@
 - @babel/coreにはソースコードを変更する機能はない。  
 - コードをASTに変換するだけ。  
 - 変更したASTに対して変更を行うのはBabel Plugin  
-    
+- `.babelrc`はコメントアウトできないから`babel.config.js`の方が使いやすい  
+
 ## setup  
 
 ```  
 # install packages  
-$ npm i --save-dev @babel/core @babel/cli  
+$ npm i --save-dev @babel/core @babel/cli @babel/plugin-transform-arrow-functions
 
 # compile code with Babel  
 $ npx babel [filename].js --out-dir lib
