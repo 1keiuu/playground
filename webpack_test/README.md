@@ -6,9 +6,9 @@
 　　Node.jsはモジュール化を`require`で実現。外部のjsを読み込めるように。  
 　　　　→ node_modules  
 　　jsだけでなく、image,cssもモジュール  
-　　cf) モジュールバンドラーについて  
+    cf) モジュールバンドラーについて  
 　　　・ https://qiita.com/hashrock/items/f66da0f7f54e03493b31  
-  
+    ex) Browserify, RequireJS
 - 様々なターゲットに使えるように変換する  
 　　ex) electron, node, webworker  
   
