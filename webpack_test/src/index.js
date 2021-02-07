@@ -1,5 +1,6 @@
+import { Cat } from "./class";
 import { hoge } from "./test1";
 const hello = () => {
-  console.log(hoge());
+  new Cat({ name: "test cat", age: 100 }).bark();
 };
 hello();
