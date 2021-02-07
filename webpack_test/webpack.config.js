@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     another: "./src/another.js",
+    test: "./src/test.jsx",
   },
   output: {
     filename: "[name].bundle.js",
@@ -13,9 +14,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         use: "babel-loader",
       },
     ],
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
 };
