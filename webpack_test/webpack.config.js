@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     another: "./src/another.js",
-    test: "./src/test.jsx",
+    test: "./src/app.jsx",
   },
   output: {
     filename: "[name].bundle.js",
