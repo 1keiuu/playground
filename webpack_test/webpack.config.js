@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist/src"),
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "./index.html",
+      template: "./index.html",
     }),
   ],
 };
