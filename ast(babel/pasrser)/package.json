@@ -1,0 +1,19 @@
+{
+  "name": "AST",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.12.15",
+    "babylon": "^6.18.0",
+    "prettier": "^2.2.1",
+    "prettier-hook": "^0.5.1",
+    "util": "^0.12.3"
+  }
+}
