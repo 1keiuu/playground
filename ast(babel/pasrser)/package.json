@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/generator": "^7.12.15",
     "@babel/parser": "^7.12.15",
     "babylon": "^6.18.0",
     "prettier": "^2.2.1",
