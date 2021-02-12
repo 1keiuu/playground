@@ -14,8 +14,14 @@ for (let i = 0; i < ast.program.body.length; i++) {
   }
 }
 
-const generatedCode = generator.default(ast, target);
+// NOTE: 変換後のコードをoutput.jsに
+// const generatedCode = generator.default(ast, target);
+// fs.writeFile("./output.js", generatedCode.code, (err) => {
+//   if (err) throw err;
+// });
 
-fs.writeFile("./output.js", generatedCode.code, (err) => {
+// NOTE: ASTをoutput.jsに
+// util.inspect()しなきゃ書き出せない
+fs.writeFile("./output.js", util.inspect(ast), (err) => {
   if (err) throw err;
 });
