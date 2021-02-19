@@ -13,7 +13,6 @@ for (let i = 0; i < ast.program.body.length; i++) {
     node.declarations[0].init.value = "hogehoge";
   }
 }
-
 // NOTE: 変換後のコードをoutput.jsに
 // const generatedCode = generator.default(ast, target);
 // fs.writeFile("./output.js", generatedCode.code, (err) => {
