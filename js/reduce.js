@@ -23,5 +23,13 @@ const complexArr = [
   { gid: 3, name: "test4" },
   { gid: 3, name: "test5" },
 ];
-const groupByReducer = (acc, cur, idx, arr) => {};
+const groupByReducer = (acc, cur, idx, arr) => {
+  let index = null;
+  acc.forEach((arr, i) => {
+    if (cur.gid == Object.entries(arr[0])[0][1]) index = i;
+  });
+  else acc.push([cur]);
+  return acc;
+};
 const groupByAns = complexArr.reduce(groupByReducer, []);
+console.log(groupByAns);
