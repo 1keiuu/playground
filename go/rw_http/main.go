@@ -21,5 +21,6 @@ func main() {
 	var httpServer http.Server
 	http.HandleFunc("/", handler)
 	httpServer.Addr = ":8888"
+	fmt.Println("Listening on 8888")
 	log.Println(httpServer.ListenAndServe())
 }
