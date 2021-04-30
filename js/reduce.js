@@ -15,21 +15,29 @@ const reducer = (acc, cur, idx, arr) => {
 // → initialValueは設定した方がややこしくならない。特に連想配列の時とか面倒になる。
 const ans = arr.reduce(reducer, []);
 
-// groupBy
+// groupBy (n=40200のデータは余裕で動いた)
 const complexArr = [
   { gid: 1, name: "test1" },
   { gid: 2, name: "test2" },
   { gid: 1, name: "test3" },
   { gid: 3, name: "test4" },
   { gid: 3, name: "test5" },
+  { gid: 1, name: "test1" },
+  { gid: 2, name: "test2" },
 ];
 const groupByReducer = (acc, cur, idx, arr) => {
   let index = null;
   acc.forEach((arr, i) => {
     if (cur.gid == Object.entries(arr[0])[0][1]) index = i;
   });
-  else acc.push([cur]);
+  // NOTE: if(!index)だと0の場合も弾かれてしまう
+  if (index == null) acc.push([cur]);
+  else if (index >= 0) {
+    acc[index].push(cur);
+  }
   return acc;
 };
 const groupByAns = complexArr.reduce(groupByReducer, []);
-console.log(groupByAns);
+console.log(groupByAns[0].length);
+console.log(groupByAns[1].length);
+console.log(groupByAns[2].length);
