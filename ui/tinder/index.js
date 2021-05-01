@@ -6,11 +6,18 @@ document.getElementById("like").addEventListener("click", () => {
 });
 
 const swipe = (type) => {
-  const list = document.getElementById("list");
-  const child = list.children[list.children.length - 1];
-  child.classList.add(`--${type}`);
+  const topItem = list.children[list.children.length - 1];
+  topItem.classList.add(`--${type}`);
   window.setTimeout(() => {
-    list.removeChild(child);
+    list.removeChild(topItem);
+    addClasses();
   }, 1000);
 };
-// list.removeChild(child);
+const addClasses = () => {
+  const topItem = list.children[list.children.length - 1];
+  const secondItem = list.children[list.children.length - 2];
+  topItem.classList.add("--top");
+  secondItem.classList.add("--second");
+};
+
+addClasses();
